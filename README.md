@@ -1,7 +1,7 @@
 # Redis-based Free proxy server management
 ### Tech Stack
 Node.JS, Redis, Async
-### Usage
+### How to use
 #### proxycrawler.rb
 - Input: Nothing
   - You can configure it by your own, add the free high-anonymous proxy list website and their crawl rules)
