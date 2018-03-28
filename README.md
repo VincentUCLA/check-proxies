@@ -28,4 +28,7 @@ A lot of websites (e.x. craigslist) block the web crawlers as they repeatedly se
 #### Analysis
 Use free proxies. Crawl them from web and check their validity first. We only use proxies proven valid for web crawler. 
 #### Design
-For valid proxies, we give them an initial score, saved in Redis zset, using proxy as key & score as value. For each successful request, we increase the score, and vice versa. When the score became 0, the proxy became invalid and the invalid proxies will be removed. For efficiency, we send requests in thousands by async I/O. 
+- For valid proxies, we give them an initial score, saved in Redis zset, using proxy as key & score as value. 
+- For each successful request, we increase the score, and vice versa. 
+- When the score became 0, the proxy became invalid and the invalid proxies will be removed. 
+- For efficiency, we send requests in thousands by async I/O. 
